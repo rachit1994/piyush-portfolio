@@ -5,22 +5,49 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build:pages": "PAGES_BASE_PATH=/piyush-portfolio next build",
+    "preview": "serve out",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify:export": "node scripts/verify-export.mjs",
+    "verify:pages": "PAGES_BASE_PATH=/piyush-portfolio npm run verify:export",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "npm@11.12.1",
+  "overrides": {
+    "next": {
+      "postcss": "8.5.15"
+    }
   },
   "dependencies": {
     "next": "16.2.9",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@tailwindcss/postcss": "4.3.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.1",
+    "@types/node": "26.0.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
     "eslint-config-next": "16.2.9",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "jsdom": "29.1.1",
+    "prettier": "3.8.4",
+    "prettier-plugin-tailwindcss": "0.8.0",
+    "serve": "14.2.6",
+    "tailwindcss": "4.3.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.9"
   }
 }
