@@ -16,6 +16,6 @@ describe("Recoil React 19 compatibility", () => {
       </RecoilRoot>,
     );
 
-    expect(screen.getByText("light")).toBeInTheDocument();
+    expect(screen.getByText("dark")).toBeInTheDocument();
   });
 });

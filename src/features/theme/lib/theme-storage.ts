@@ -8,7 +8,7 @@ type Writer = Pick<Storage, "setItem">;
 export function readTheme(
   storage: Reader | undefined = window.localStorage,
 ): Theme {
-  return storage?.getItem(THEME_KEY) === "dark" ? "dark" : "light";
+  return storage?.getItem(THEME_KEY) === "light" ? "light" : "dark";
 }
 
 export function writeTheme(

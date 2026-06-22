@@ -1,9 +1,9 @@
 const script = `
 try {
   const saved = localStorage.getItem("piyush-theme");
-  document.documentElement.dataset.theme = saved === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = saved === "light" ? "light" : "dark";
 } catch {
-  document.documentElement.dataset.theme = "light";
+  document.documentElement.dataset.theme = "dark";
 }`;
 
 export function ThemeScript() {

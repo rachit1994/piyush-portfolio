@@ -11,11 +11,11 @@ describe("ThemeToggle", () => {
       </ThemeProvider>,
     );
 
-    fireEvent.click(screen.getByRole("button", { name: "Use dark theme" }));
+    fireEvent.click(screen.getByRole("button", { name: "Use light theme" }));
 
-    expect(document.documentElement.dataset.theme).toBe("dark");
+    expect(document.documentElement.dataset.theme).toBe("light");
     expect(
-      screen.getByRole("button", { name: "Use light theme" }),
+      screen.getByRole("button", { name: "Use dark theme" }),
     ).toBeInTheDocument();
   });
 });
