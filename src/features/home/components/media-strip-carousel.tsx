@@ -1,23 +1,26 @@
 "use client";
 
-import { projects } from "@/features/home/home-data";
+import { homeCategories } from "@/features/home/home-data";
 
 import { MediaStripSlide } from "./media-strip-slide";
 import { useMediaStripCarousel } from "./use-media-strip-carousel";
 
-const carouselSlides = [...projects, ...projects, ...projects];
+const carouselSlides = [
+  ...homeCategories,
+  ...homeCategories,
+  ...homeCategories,
+];
 
 export function MediaStripCarousel() {
-  const viewportRef = useMediaStripCarousel(projects.length);
+  const viewportRef = useMediaStripCarousel(homeCategories.length);
   return (
-    <section aria-label="Selected work preview" className="media-strip">
+    <section aria-label="Photography categories" className="media-strip">
       <div className="media-strip-viewport" ref={viewportRef}>
         <div className="media-strip-track">
-          {carouselSlides.map((project, index) => (
+          {carouselSlides.map((category, index) => (
             <MediaStripSlide
-              index={index % projects.length}
-              key={`${project.name}-${index}`}
-              project={project}
+              category={category}
+              key={`${category.slug}-${index}`}
             />
           ))}
         </div>

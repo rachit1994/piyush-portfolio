@@ -13,7 +13,7 @@ const carouselOptions = {
   loop: false,
 };
 
-export function useMediaStripCarousel(projectCount: number) {
+export function useMediaStripCarousel(slideCount: number) {
   const isResetting = useRef(false);
   const plugins = useMemo(
     () => [
@@ -30,7 +30,7 @@ export function useMediaStripCarousel(projectCount: number) {
     [],
   );
   const [viewportRef, emblaApi] = useEmblaCarousel(
-    { ...carouselOptions, startIndex: projectCount },
+    { ...carouselOptions, startIndex: slideCount },
     plugins,
   );
 
@@ -39,7 +39,7 @@ export function useMediaStripCarousel(projectCount: number) {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const { applyMotionPreference, keepWithinMiddleSet } = createLoopController(
       emblaApi,
-      projectCount,
+      slideCount,
       isResetting,
       reduceMotion,
     );
@@ -53,7 +53,7 @@ export function useMediaStripCarousel(projectCount: number) {
       emblaApi.off("reInit", keepWithinMiddleSet);
       reduceMotion.removeEventListener("change", applyMotionPreference);
     };
-  }, [emblaApi, projectCount]);
+  }, [emblaApi, slideCount]);
 
   return viewportRef;
 }

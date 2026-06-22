@@ -1,24 +1,22 @@
 import Image from "next/image";
 
-import type { projects } from "@/features/home/home-data";
-
-type MediaStripProject = (typeof projects)[number];
+import type { HomeCategory } from "@/features/home/home-data";
 
 type MediaStripSlideProps = {
-  index: number;
-  project: MediaStripProject;
+  category: HomeCategory;
 };
 
-export function MediaStripSlide({ index, project }: MediaStripSlideProps) {
+export function MediaStripSlide({ category }: MediaStripSlideProps) {
   return (
-    <figure className={`media-strip-item media-strip-${index}`}>
+    <figure className="media-strip-item">
       <Image
-        alt={`${project.name} identity preview`}
+        alt={`${category.label} photography category`}
         className="media-strip-image"
         fill
-        sizes="(max-width: 800px) 75vw, 28vw"
-        src={project.image}
+        sizes="(max-width: 800px) 72vw, 28vw"
+        src={category.image}
       />
+      <figcaption className="media-strip-caption">{category.label}</figcaption>
     </figure>
   );
 }

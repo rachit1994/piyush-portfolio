@@ -1,12 +1,15 @@
 import { publicAssetPath } from "@/shared/assets";
 
-export const categories = [
-  ["Product", "#2f2cff"],
-  ["AI", "#ef2b2d"],
-  ["Platforms", "#d729e8"],
-  ["Fintech", "#11944b"],
-  ["Communities", "#43cce8"],
-] as const;
+export { homeCategories } from "./home-categories";
+export type { HomeCategory } from "./home-categories";
+
+export const projectTagColors = {
+  Product: "#2f2cff",
+  AI: "#ef2b2d",
+  Platforms: "#d729e8",
+  Fintech: "#11944b",
+  Communities: "#43cce8",
+} as const;
 
 export const projects = [
   {
@@ -38,5 +41,3 @@ export const projects = [
       "A confident career platform that helps early talent move from uncertainty to momentum with clarity.",
   },
 ] as const;
-
-export const categoryColors = Object.fromEntries(categories);

@@ -49,9 +49,11 @@
     flex-direction: column;
   }
   .media-strip-item {
-    flex-basis: 72vw;
+    flex: 0 0 72vw;
     width: 72vw;
     height: 72vw;
+    min-width: 72vw;
+    min-height: 72vw;
   }
   .services-grid,
   .project-meta,

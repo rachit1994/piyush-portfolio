@@ -7,7 +7,7 @@ import type { EmblaCarouselType } from "embla-carousel";
  */
 export function createLoopController(
   emblaApi: EmblaCarouselType,
-  projectCount: number,
+  slideCount: number,
   isResetting: { current: boolean },
   reduceMotion: MediaQueryList,
 ) {
@@ -33,7 +33,7 @@ export function createLoopController(
     if (isResetting.current) return;
     const slides = emblaApi.slideNodes();
     const first = slides[0];
-    const firstMiddle = slides[projectCount];
+    const firstMiddle = slides[slideCount];
     if (!first || !firstMiddle) return;
     const setWidth = firstMiddle.offsetLeft - first.offsetLeft;
     if (!setWidth) return;

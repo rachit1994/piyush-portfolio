@@ -1,4 +1,4 @@
-import { categoryColors } from "@/features/home/home-data";
+import { projectTagColors } from "@/features/home/home-data";
 import { ProjectGallery } from "@/features/home/components/project-gallery";
 import { Pill } from "@/shared/ui";
 
@@ -17,7 +17,14 @@ export function ProjectCase({ image, name, summary, tags }: ProjectCaseProps) {
           <h3>{name}</h3>
           <div className="pill-row">
             {tags.map((tag) => (
-              <Pill dot={categoryColors[tag]} key={tag}>
+              <Pill
+                dot={
+                  tag in projectTagColors
+                    ? projectTagColors[tag as keyof typeof projectTagColors]
+                    : undefined
+                }
+                key={tag}
+              >
                 {tag}
               </Pill>
             ))}

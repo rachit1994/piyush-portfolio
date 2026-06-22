@@ -1,4 +1,4 @@
-import { categories } from "@/features/home/home-data";
+import { homeCategories } from "@/features/home/home-data";
 import { Pill } from "@/shared/ui";
 
 export function Hero() {
@@ -14,9 +14,9 @@ export function Hero() {
       <div className="hero-meta">
         <p>for teams that believes in streamlining their processes</p>
         <div className="pill-row">
-          {categories.map(([label, color]) => (
-            <Pill dot={color} key={label}>
-              {label}
+          {homeCategories.map((category) => (
+            <Pill dot={category.color} key={category.slug}>
+              {category.label}
             </Pill>
           ))}
         </div>

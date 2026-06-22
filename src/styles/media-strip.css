@@ -14,7 +14,7 @@
 .media-strip-track {
   display: flex;
   gap: 24px;
-  align-items: flex-end;
+  align-items: stretch;
   backface-visibility: hidden;
 }
 .media-strip-item {
@@ -22,22 +22,33 @@
   flex: 0 0 28vw;
   width: 28vw;
   height: 28vw;
+  min-width: 28vw;
+  min-height: 28vw;
+  aspect-ratio: 1 / 1;
   margin: 0;
   overflow: hidden;
+  border-radius: 4px;
+  background: var(--muted);
   transition: transform 0.35s ease;
 }
 .media-strip-item:hover,
 .media-strip-item:focus-within {
   transform: translateY(-6px);
 }
-.media-strip-item img,
 .media-strip-image {
   object-fit: cover;
-  transition: transform 0.45s ease;
+  object-position: center;
 }
-.media-strip-item:hover img,
-.media-strip-item:focus-within img {
-  transform: scale(1.04);
+.media-strip-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 14px 16px;
+  background: linear-gradient(transparent, rgb(0 0 0 / 72%));
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  pointer-events: none;
 }
 .drag-hint {
   position: absolute;
