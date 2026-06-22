@@ -7,8 +7,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Piyush Design Office",
-    template: "%s | Piyush Design Office",
+    default: "Piyush Production House",
+    template: "%s | Piyush Production House",
   },
   description: "Product direction, interface design, and engineering systems.",
 };
@@ -22,6 +22,10 @@ export default function RootLayout({
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         <ThemeScript />
+        {/* Warm up YouTube hosts: thumbnails load immediately, player on play. */}
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://s.ytimg.com" />
       </head>
       <body>
         <ThemeProvider>
@@ -29,7 +33,7 @@ export default function RootLayout({
           <main>{children}</main>
           <footer className="site-footer">
             <span>Based in India, working worldwide.</span>
-            <span>© {new Date().getFullYear()} Piyush Design Office</span>
+            <span>© {new Date().getFullYear()} Piyush Production House</span>
           </footer>
         </ThemeProvider>
       </body>

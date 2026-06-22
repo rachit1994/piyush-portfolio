@@ -4,20 +4,31 @@
   top: 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: start;
+  align-items: center;
   min-height: 118px;
   padding: 24px var(--gutter);
   background: color-mix(in srgb, var(--page) 92%, transparent);
   backdrop-filter: blur(14px);
 }
-.desktop-nav,
-.site-actions {
+.site-header__start {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-self: start;
+}
+.desktop-nav {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 .site-actions {
-  justify-content: flex-end;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-self: end;
+}
+.site-actions .theme-toggle {
+  display: none;
 }
 .wordmark {
   display: flex;
@@ -49,10 +60,6 @@
   border-color: var(--ink);
   background: var(--ink);
   color: var(--page);
-}
-.availability {
-  color: var(--green);
-  font-size: 14px;
 }
 .mobile-nav {
   display: none;

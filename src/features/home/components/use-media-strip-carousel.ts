@@ -25,7 +25,7 @@ export function useMediaStripCarousel(slideCount: number) {
         stopOnInteraction: false,
         stopOnMouseEnter: true,
       }),
-      WheelGestures({ forceWheelAxis: "y" }),
+      WheelGestures({ forceWheelAxis: "x" }),
     ],
     [],
   );

@@ -1,0 +1,24 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "npx serve out -l 4179 --no-clipboard --no-port-switching",
+      "startServerReadyPattern": "Accepting connections",
+      "url": ["http://localhost:4179/"],
+      "numberOfRuns": 3,
+      "settings": {
+        "formFactor": "mobile",
+        "screenEmulation": { "mobile": true }
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.88 }],
+        "largest-contentful-paint": ["error", { "maxNumericValue": 4000 }],
+        "total-blocking-time": ["error", { "maxNumericValue": 600 }],
+        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }],
+        "total-byte-weight": ["error", { "maxNumericValue": 2500000 }]
+      }
+    },
+    "upload": { "target": "filesystem", "outputDir": ".lighthouseci" }
+  }
+}

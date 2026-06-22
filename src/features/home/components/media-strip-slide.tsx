@@ -1,20 +1,19 @@
-import Image from "next/image";
-
 import type { HomeCategory } from "@/features/home/home-data";
+
+import { MediaStripImage } from "./media-strip-image";
 
 type MediaStripSlideProps = {
   category: HomeCategory;
+  priority?: boolean;
 };
 
-export function MediaStripSlide({ category }: MediaStripSlideProps) {
+export function MediaStripSlide({ category, priority }: MediaStripSlideProps) {
   return (
     <figure className="media-strip-item">
-      <Image
+      <MediaStripImage
         alt={`${category.label} photography category`}
-        className="media-strip-image"
-        fill
-        sizes="(max-width: 800px) 72vw, 28vw"
-        src={category.image}
+        priority={priority}
+        source={category.image}
       />
       <figcaption className="media-strip-caption">{category.label}</figcaption>
     </figure>

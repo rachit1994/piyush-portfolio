@@ -1,19 +1,6 @@
 @media (max-width: 809px) {
-  .project-meta,
   .about-grid {
     grid-template-columns: 1fr;
-  }
-
-  .project-gallery {
-    display: flex;
-    overflow-x: auto;
-  }
-
-  .project-image,
-  .project-image-1,
-  .project-image-2 {
-    min-width: 86vw;
-    height: 86vw;
   }
 
   .playground-grid {

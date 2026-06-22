@@ -1,5 +1,6 @@
-export const primaryLinks = [
-  { href: "/about", label: "About" },
-  { href: "/#work", label: "Work" },
-  { href: "/#playground", label: "Playground" },
-] as const;
+export type PrimaryLink = {
+  href: string;
+  label: string;
+};
+
+export const primaryLinks: readonly PrimaryLink[] = [];

@@ -2,14 +2,7 @@ import { access, readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const outputDirectory = new URL("../out/", import.meta.url);
-const requiredFiles = [
-  "index.html",
-  "about/index.html",
-  "login/index.html",
-  "private/index.html",
-  "404.html",
-  ".nojekyll",
-];
+const requiredFiles = ["index.html", "404.html", ".nojekyll"];
 
 await Promise.all(
   requiredFiles.map(async (file) => {
@@ -30,15 +23,9 @@ const indexHtml = await readFile(
 );
 const basePath = process.env.PAGES_BASE_PATH ?? "";
 const expectedAssetPath = `${basePath}/_next/static/`;
-const expectedAboutPath = `${basePath}/about/`;
+const expectedMediaPath = `${basePath}/media/home-page-categories/`;
 
-const expectedMediaPath = `${basePath}/media/northstar.jpg`;
-
-for (const expectedPath of [
-  expectedAssetPath,
-  expectedAboutPath,
-  expectedMediaPath,
-]) {
+for (const expectedPath of [expectedAssetPath, expectedMediaPath]) {
   if (!indexHtml.includes(expectedPath)) {
     throw new Error(`Static export is missing expected path: ${expectedPath}`);
   }

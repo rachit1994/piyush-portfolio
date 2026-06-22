@@ -6,11 +6,10 @@
   }
   .site-header {
     min-height: 72px;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
     padding: 16px;
   }
-  .desktop-nav,
-  .site-actions {
+  .desktop-nav {
     display: none;
   }
   .mobile-nav {
@@ -32,7 +31,7 @@
   }
   .wordmark {
     align-items: center;
-    justify-self: end;
+    justify-self: center;
   }
   .wordmark-title {
     font-size: 28px;
@@ -55,16 +54,19 @@
     min-width: 72vw;
     min-height: 72vw;
   }
-  .services-grid,
-  .project-meta,
-  .about-grid {
-    grid-template-columns: 1fr;
+  .showcase-card {
+    flex: 0 0 240px;
+    width: 240px;
+    height: 320px;
   }
-  .services-copy h2 {
-    font-size: 42px;
+  .showcase-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
-  .process-board {
-    min-height: 470px;
-    padding: 40px 20px;
+  .showcase-row {
+    border-radius: 20px;
+  }
+  .showcase-row__track {
+    padding-left: 16px;
   }
 }

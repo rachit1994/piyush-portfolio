@@ -15,6 +15,10 @@
     "format:check": "prettier --check .",
     "verify:export": "node scripts/verify-export.mjs",
     "verify:pages": "PAGES_BASE_PATH=/piyush-portfolio npm run verify:export",
+    "media:optimize": "node scripts/optimize-media.mjs",
+    "perf:memory": "node scripts/measure-memory.mjs",
+    "perf:lighthouse": "lhci autorun",
+    "perf": "npm run build && npm run perf:memory && npm run perf:lighthouse",
     "postinstall": "patch-package",
     "architecture:check": "node scripts/verify-architecture.mjs",
     "check": "npm run format:check && npm run architecture:check && npm run lint && npm run typecheck && npm test"
@@ -41,6 +45,7 @@
     "recoil": "0.7.7"
   },
   "devDependencies": {
+    "@lhci/cli": "0.15.1",
     "@tailwindcss/postcss": "4.3.1",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
@@ -55,7 +60,9 @@
     "patch-package": "8.0.1",
     "prettier": "3.8.4",
     "prettier-plugin-tailwindcss": "0.8.0",
+    "puppeteer": "25.2.0",
     "serve": "14.2.6",
+    "sharp": "0.35.2",
     "tailwindcss": "4.3.1",
     "typescript": "6.0.3",
     "vitest": "4.1.9"

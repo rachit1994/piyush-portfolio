@@ -21,6 +21,7 @@ export function MediaStripCarousel() {
             <MediaStripSlide
               category={category}
               key={`${category.slug}-${index}`}
+              priority={index < 2}
             />
           ))}
         </div>

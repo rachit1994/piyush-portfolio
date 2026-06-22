@@ -4,6 +4,8 @@ import { primaryLinks } from "@/features/navigation/navigation-data";
 import { ThemeToggle } from "@/features/theme";
 
 export function MobileNav() {
+  if (primaryLinks.length === 0) return null;
+
   return (
     <details className="mobile-nav">
       <summary>Menu ☰</summary>

@@ -6,8 +6,10 @@ import { SiteActions } from "@/features/navigation/components/site-actions";
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <DesktopNav />
-      <MobileNav />
+      <div className="site-header__start">
+        <DesktopNav />
+        <MobileNav />
+      </div>
       <Wordmark />
       <SiteActions />
     </header>

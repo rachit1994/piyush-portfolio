@@ -1,9 +1,7 @@
 .hero {
   padding: 96px var(--gutter) 72px;
 }
-.hero h1,
-.services-copy h2,
-.work-section > h2 {
+.hero h1 {
   margin: 0;
   font: 400 var(--hero-size)/0.96 var(--font-serif);
   letter-spacing: -0.045em;
@@ -12,28 +10,25 @@
   font-family: var(--font-sans);
   letter-spacing: -0.075em;
 }
-.hero em,
-.services-copy em,
-.work-section em {
+.hero em {
   font-weight: 400;
 }
 .hero-meta {
   display: flex;
+  flex-direction: column;
   gap: 16px;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 28px;
 }
 .hero-meta p {
   margin: 0;
 }
-.pill-row,
-.value-tags {
+.pill-row {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.pill,
-.value-tags span {
+.pill {
   display: inline-flex;
   gap: 9px;
   align-items: center;
@@ -47,7 +42,6 @@
   height: 8px;
   border-radius: 50%;
 }
-.project-image img,
 .playground-grid img {
   object-fit: cover;
 }
