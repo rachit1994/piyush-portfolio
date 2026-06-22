@@ -32,7 +32,13 @@ const basePath = process.env.PAGES_BASE_PATH ?? "";
 const expectedAssetPath = `${basePath}/_next/static/`;
 const expectedAboutPath = `${basePath}/about/`;
 
-for (const expectedPath of [expectedAssetPath, expectedAboutPath]) {
+const expectedMediaPath = `${basePath}/media/northstar.jpg`;
+
+for (const expectedPath of [
+  expectedAssetPath,
+  expectedAboutPath,
+  expectedMediaPath,
+]) {
   if (!indexHtml.includes(expectedPath)) {
     throw new Error(`Static export is missing expected path: ${expectedPath}`);
   }

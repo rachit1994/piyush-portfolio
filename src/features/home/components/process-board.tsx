@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { publicAssetPath } from "@/shared/assets";
+
 export function ProcessBoard() {
   return (
     <div className="process-board">
@@ -10,7 +12,7 @@ export function ProcessBoard() {
       <Image
         alt="Northstar project direction board"
         height={720}
-        src="/media/northstar.jpg"
+        src={publicAssetPath("/media/northstar.jpg")}
         width={720}
       />
       <div className="process-card">
