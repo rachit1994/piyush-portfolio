@@ -1,0 +1,68 @@
+@media (max-width: 809px) {
+  :root {
+    --gutter: 16px;
+    --space-section: 96px;
+    --hero-size: 42px;
+  }
+  .site-header {
+    min-height: 72px;
+    grid-template-columns: 1fr auto;
+    padding: 16px;
+  }
+  .desktop-nav,
+  .site-actions {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .mobile-nav summary {
+    list-style: none;
+  }
+  .mobile-nav-panel {
+    position: absolute;
+    top: 66px;
+    left: 16px;
+    display: grid;
+    gap: 12px;
+    min-width: 180px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    background: var(--page);
+  }
+  .wordmark {
+    align-items: center;
+    justify-self: end;
+  }
+  .wordmark-title {
+    font-size: 28px;
+  }
+  .wordmark-handle {
+    font-size: 11px;
+  }
+  .hero {
+    padding-top: 42px;
+  }
+  .hero-meta,
+  .closing-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .media-strip-item {
+    flex-basis: 72vw;
+    width: 72vw;
+    height: 72vw;
+  }
+  .services-grid,
+  .project-meta,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-copy h2 {
+    font-size: 42px;
+  }
+  .process-board {
+    min-height: 470px;
+    padding: 40px 20px;
+  }
+}

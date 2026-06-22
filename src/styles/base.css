@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+main {
+  overflow: clip;
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 56px var(--gutter) 28px;
+  font-size: 14px;
+}
+::selection {
+  background: #d8ff35;
+  color: #000;
+}
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

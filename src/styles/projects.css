@@ -1,0 +1,72 @@
+.services-section,
+.work-section,
+.playground-section {
+  padding: var(--space-section) var(--gutter) 0;
+}
+.value-tags .tilted {
+  transform: rotate(8deg);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 7vw;
+  margin-top: 34px;
+}
+.services-copy h2 {
+  font-size: 56px;
+}
+.services-copy > p {
+  max-width: 580px;
+  line-height: 1.5;
+}
+.dark-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--page);
+}
+.founder-reasons {
+  margin-top: 32px;
+  font-size: 14px;
+}
+.founder-reasons p {
+  margin: 9px 0;
+}
+.process-board {
+  position: relative;
+  min-height: 520px;
+  padding: 72px 56px;
+  border-radius: 16px;
+  background: var(--panel);
+}
+.process-board img {
+  width: 75%;
+  height: auto;
+  margin: 40px 0 0 15%;
+  transform: rotate(-2deg);
+}
+.process-note,
+.process-card {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: var(--page);
+  box-shadow: var(--shadow);
+}
+.process-note {
+  top: 38px;
+  left: 44px;
+}
+.process-card {
+  right: 44px;
+  bottom: 60px;
+  max-width: 220px;
+  background: #fff45c;
+  color: #171100;
+  transform: rotate(5deg);
+}

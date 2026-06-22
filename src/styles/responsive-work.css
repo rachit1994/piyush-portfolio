@@ -1,0 +1,32 @@
+@media (max-width: 809px) {
+  .project-meta,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .project-image,
+  .project-image-1,
+  .project-image-2 {
+    min-width: 86vw;
+    height: 86vw;
+  }
+
+  .playground-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

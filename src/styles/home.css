@@ -1,0 +1,53 @@
+.hero {
+  padding: 96px var(--gutter) 72px;
+}
+.hero h1,
+.services-copy h2,
+.work-section > h2 {
+  margin: 0;
+  font: 400 var(--hero-size)/0.96 var(--font-serif);
+  letter-spacing: -0.045em;
+}
+.hero h1 span {
+  font-family: var(--font-sans);
+  letter-spacing: -0.075em;
+}
+.hero em,
+.services-copy em,
+.work-section em {
+  font-weight: 400;
+}
+.hero-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 28px;
+}
+.hero-meta p {
+  margin: 0;
+}
+.pill-row,
+.value-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pill,
+.value-tags span {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--muted);
+  font-size: 14px;
+}
+.pill i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.project-image img,
+.playground-grid img {
+  object-fit: cover;
+}

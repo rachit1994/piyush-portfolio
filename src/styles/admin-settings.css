@@ -1,0 +1,42 @@
+.settings-panel {
+  max-width: 640px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-field label {
+  font-size: 14px;
+  color: var(--soft-ink);
+}
+
+.settings-field input,
+.settings-field textarea {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--page);
+  color: var(--ink);
+  font: inherit;
+}
+
+.settings-field textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

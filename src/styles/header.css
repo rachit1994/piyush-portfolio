@@ -1,0 +1,59 @@
+.site-header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  min-height: 118px;
+  padding: 24px var(--gutter);
+  background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(14px);
+}
+.desktop-nav,
+.site-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.site-actions {
+  justify-content: flex-end;
+}
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-self: center;
+}
+.wordmark-title {
+  font: 40px/0.88 var(--font-serif);
+  letter-spacing: -1.7px;
+}
+.wordmark-handle {
+  color: var(--yellow);
+  font: 500 13px/1.2 var(--font-sans);
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+.nav-pill,
+.theme-toggle,
+.mobile-nav summary {
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--page);
+  white-space: nowrap;
+}
+.nav-pill-dark {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--page);
+}
+.availability {
+  color: var(--green);
+  font-size: 14px;
+}
+.mobile-nav {
+  display: none;
+}

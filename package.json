@@ -15,7 +15,9 @@
     "format:check": "prettier --check .",
     "verify:export": "node scripts/verify-export.mjs",
     "verify:pages": "PAGES_BASE_PATH=/piyush-portfolio npm run verify:export",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+    "postinstall": "patch-package",
+    "architecture:check": "node scripts/verify-architecture.mjs",
+    "check": "npm run format:check && npm run architecture:check && npm run lint && npm run typecheck && npm test"
   },
   "engines": {
     "node": ">=22.13.0"
@@ -27,9 +29,16 @@
     }
   },
   "dependencies": {
+    "@fontsource/dm-sans": "5.2.8",
+    "@fontsource/instrument-serif": "5.2.8",
+    "@supabase/supabase-js": "2.108.2",
+    "embla-carousel-auto-scroll": "8.6.0",
+    "embla-carousel-react": "8.6.0",
+    "embla-carousel-wheel-gestures": "8.1.0",
     "next": "16.2.9",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.7",
+    "recoil": "0.7.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.1",
@@ -43,6 +52,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.9",
     "jsdom": "29.1.1",
+    "patch-package": "8.0.1",
     "prettier": "3.8.4",
     "prettier-plugin-tailwindcss": "0.8.0",
     "serve": "14.2.6",

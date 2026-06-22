@@ -1,0 +1,56 @@
+.editorial-page {
+  min-height: 80vh;
+  padding: 96px var(--gutter) 120px;
+}
+.page-intro > p {
+  margin: 0 0 24px;
+  color: var(--soft-ink);
+}
+.page-intro h1 {
+  max-width: 1000px;
+  margin: 0;
+  font: 400 clamp(64px, 8vw, 116px)/0.92 var(--font-serif);
+  letter-spacing: -0.055em;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  margin: 140px 0 80px;
+}
+.about-grid h2 {
+  font: 400 48px/1 var(--font-serif);
+}
+.about-grid p,
+.access-panel > p {
+  max-width: 620px;
+  font-size: 21px;
+  line-height: 1.5;
+}
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.access-panel {
+  max-width: 620px;
+  margin: 100px 0 0 auto;
+}
+.access-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+}
+.access-label {
+  font-size: 14px;
+}
+.access-input,
+.access-status {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--page);
+}

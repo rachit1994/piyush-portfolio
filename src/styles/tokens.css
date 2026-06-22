@@ -1,0 +1,31 @@
+:root {
+  --font-sans: "DM Sans", Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --page: #fff;
+  --ink: #050505;
+  --muted: #f5f5f5;
+  --line: #dedede;
+  --soft-ink: #525252;
+  --green: #12974b;
+  --yellow: #fff45c;
+  --panel: #f1f1f1;
+  --shadow: 0 16px 50px rgb(0 0 0 / 8%);
+  --gutter: 24px;
+  --radius-pill: 999px;
+  --space-section: 132px;
+  --hero-size: clamp(54px, 5vw, 76px);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --page: #11110f;
+  --ink: #f5f3ec;
+  --muted: #242421;
+  --line: #3c3b37;
+  --soft-ink: #b8b5ad;
+  --green: #55cf7c;
+  --yellow: #fff45c;
+  --panel: #1c1c19;
+  --shadow: 0 16px 50px rgb(0 0 0 / 35%);
+  color-scheme: dark;
+}

@@ -1,0 +1,68 @@
+.work-section > h2 {
+  margin-bottom: 80px;
+}
+.project-case {
+  margin-bottom: 112px;
+}
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  gap: 40px;
+  margin-bottom: 34px;
+}
+.project-meta h3 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.project-meta > p {
+  margin: 0;
+  line-height: 1.5;
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.88fr;
+  gap: 24px;
+  align-items: end;
+}
+.project-image {
+  position: relative;
+  height: 28vw;
+  margin: 0;
+}
+.project-image-1 {
+  height: 22vw;
+}
+.project-image-2 {
+  height: 25vw;
+}
+.playground-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 7vw;
+}
+.playground-grid figure {
+  position: relative;
+  aspect-ratio: 1;
+  margin: 0;
+}
+.playground-section h2 {
+  margin: 170px 0 20px;
+  text-align: center;
+  font: 400 clamp(84px, 12vw, 180px)/0.72 var(--font-serif);
+  letter-spacing: -0.06em;
+}
+.playground-section h2 span {
+  margin-left: 10vw;
+}
+.playground-section > p {
+  text-align: center;
+}
+.closing-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 160px var(--gutter);
+  font-size: 22px;
+}
