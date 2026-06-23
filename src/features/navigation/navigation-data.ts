@@ -3,4 +3,6 @@ export type PrimaryLink = {
   label: string;
 };
 
-export const primaryLinks: readonly PrimaryLink[] = [];
+export const primaryLinks: readonly PrimaryLink[] = [
+  { href: "/work", label: "Work" },
+];

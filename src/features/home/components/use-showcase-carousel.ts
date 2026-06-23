@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import WheelGestures from "embla-carousel-wheel-gestures";
 import { useEffect, useMemo, useRef } from "react";
 
-import { createLoopController } from "./media-strip-loop";
+import { createLoopController } from "@/shared/carousel/loop-controller";
 
 type ScrollDirection = "forward" | "backward";
 

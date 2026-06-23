@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { homeCategories } from "@/features/home/home-data";
 import { Pill } from "@/shared/ui";
 
@@ -15,9 +17,13 @@ export function Hero() {
         <p>for teams that believes in streamlining their processes</p>
         <div className="pill-row">
           {homeCategories.map((category) => (
-            <Pill dot={category.color} key={category.slug}>
-              {category.label}
-            </Pill>
+            <Link
+              className="pill-link"
+              href={`/work?category=${category.slug}`}
+              key={category.slug}
+            >
+              <Pill dot={category.color}>{category.label}</Pill>
+            </Link>
           ))}
         </div>
       </div>

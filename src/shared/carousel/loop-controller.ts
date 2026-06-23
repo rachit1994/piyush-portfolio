@@ -1,10 +1,5 @@
 import type { EmblaCarouselType } from "embla-carousel";
 
-/**
- * Builds the handlers that keep an infinite-looking auto-scroll carousel
- * anchored to its middle copy of the slides, and that honor reduced motion.
- * Extracted from the component so each file stays within the line budget.
- */
 export function createLoopController(
   emblaApi: EmblaCarouselType,
   slideCount: number,

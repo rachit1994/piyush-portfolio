@@ -1,0 +1,20 @@
+.pill-link {
+  text-decoration: none;
+  outline-offset: 3px;
+}
+.pill-link:hover .pill,
+.pill-link:focus-visible .pill {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+.media-strip-item-link {
+  display: block;
+  text-decoration: none;
+  flex: 0 0 28vw;
+  min-width: 28vw;
+}
+.media-strip-item-link .media-strip-item {
+  flex: none;
+  width: 100%;
+  min-width: 0;
+}

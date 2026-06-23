@@ -2,7 +2,7 @@ import {
   buildCategorySrc,
   buildCategorySrcSet,
   categoryImageSizes,
-} from "@/features/home/lib/category-image-srcset";
+} from "@/shared/assets/category-srcset";
 
 type MediaStripImageProps = {
   source: string;
